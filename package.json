@@ -1,0 +1,10 @@
+{
+  "name": "angularjs-hello-world",
+  "version": "1.0.0",
+  "description": "Simple AngularJS app",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.6.10"
+  }
+}
