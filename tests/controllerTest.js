@@ -51,6 +51,13 @@ describe('Sample controller', function(){
       $scope.sum();
       expect($scope.result).toBe(5);
     });
+
+    it('should fail', function(){
+      var $scope = {};
+      var controller = $controller('SampleController', { $scope: $scope });
+      $scope.sum();
+      expect($scope.result).toBe(6);
+    });
   });
 
 });

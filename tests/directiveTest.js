@@ -18,4 +18,11 @@ describe('Sample directive', function(){
     // Check that the compiled element contains the templated content.
     expect(element.html()).toContain("Hello, world");
   });
+
+  it('should fail', function(){
+    // name = bob
+    var element = $compile("<sample-directive name='bob'></sample-directive>")($rootScope);
+    $rootScope.$digest();
+    expect(element.html()).toContain("Hello, world");
+  });
 });
