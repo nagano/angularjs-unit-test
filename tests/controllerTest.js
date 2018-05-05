@@ -1,25 +1,20 @@
 describe('SampleController', function(){
 
-  it('should do something', function(){
-    expect('hello').toBe('hello');
-  });
+  beforeEach(module('app'));
 
-  // beforeEach(module('app'));
-  //
-  // let $controller;
-  //
-  // beforeEach(inject(function(_$controller_){
-  //   $controller = _$controller_;
-  // }));
-  //
-  // describe('sum', function(){
-  //   it('should add two numbers', function(){
-  //     let $scope = {};
-  //     let controller = $controller('SampleController', {$scope: $scope});
-  //
-  //     $scope.sum(1, 2);
-  //     expect($scope.result).toBe(3);
-  //   });
-  // });
+  var $controller;
+
+  beforeEach(inject(function(_$controller_){
+    $controller = _$controller_;
+  }));
+
+  describe('sum', function(){
+    it('should add two numbers', function(){
+      var $scope = {};
+      var controller = $controller('SampleController', { $scope: $scope });
+      $scope.sum();
+      expect($scope.result).toBe(5);
+    });
+  });
 
 });
