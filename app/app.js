@@ -43,3 +43,20 @@ app.service('sampleService', [function(){
         self.result = self.e * self.f;
     };
 }]);
+
+app.service('serviceSpyExample', [function(){
+    const self = this;
+
+    this.functionOne = function(){
+        self.messageOne = 'one';
+    };
+
+    this.functionTwo = function(msg){
+        self.messageTwo = msg;
+    };
+
+    this.functionThree = function(msg){
+        self.functionOne();
+        self.functionTwo(msg);
+    }
+}]);
