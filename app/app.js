@@ -32,3 +32,14 @@ app.directive('sampleDirective', [function(){
     }
   }
 }]);
+
+app.service('sampleService', [function(){
+    const self = this;
+
+    this.multiply = function(){
+        self.e = 5;
+        self.f = 2;
+
+        self.result = self.e * self.f;
+    };
+}]);
