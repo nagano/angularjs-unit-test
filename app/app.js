@@ -11,6 +11,17 @@ app.controller("SampleController", ['$scope', function($scope) {
   };
 }]);
 
+app.controller("SampleControllerAs", ['$scope', function($scope) {
+    const self = this;
+
+    this.subtract = function(){
+        self.c = 10;
+        self.d = 3;
+
+        self.result = self.c - self.d;
+    };
+}]);
+
 app.directive('sampleDirective', [function(){
   return {
     restrict: 'E',
